@@ -12,19 +12,16 @@ class CarVehicle: Vehicle , DisplayDetails {
     var numberOfDoors = Int()
     
     init(numberOfDoors: Int = Int()) {
-        self.numberOfDoors = numberOfDoors
+        self.numberOfDoors = 4
         super.init(make: "Toyota",model: "CHR",year: 1994)
     }
     
-    override func vehycleInfo() -> [String] {
-        var carInfo = super.vehycleInfo()
-        carInfo.append("number of doors \(numberOfDoors)")
-        return carInfo
+    override func vehicleInfo() -> String {
+        return ("\(super.vehicleInfo()), number of doors = \(numberOfDoors)")
     }
     
     func displayDetails() -> String {
-        let detailInfo = vehycleInfo().joined(separator: ",")
-        return detailInfo
+        return vehicleInfo()
     }
-
+    
 }
