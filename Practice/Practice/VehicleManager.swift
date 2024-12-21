@@ -12,6 +12,7 @@ class VehicleManager: UIViewController, UITableViewDataSource, UITableViewDelega
     var vehicleName = String()
     var carDetail = CarVehicle()
     var truckDetail = TrucksVehicle()
+    var motorDetail = MotorcycleVehicle()
     var vehicles = ["car", "trucks", "motorcycle"]
     var tableView = UITableView()
     
@@ -49,7 +50,7 @@ class VehicleManager: UIViewController, UITableViewDataSource, UITableViewDelega
         case "trucks":
             cell.detailLabel.text = truckDetail.displayDetails()
         case "motorcycle":
-            cell.detailLabel.text = "a"
+            cell.detailLabel.text = motorDetail.displayDetails()
         default:
             cell.detailLabel.text = ""
         }

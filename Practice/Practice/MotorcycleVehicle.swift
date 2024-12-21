@@ -17,11 +17,11 @@ class MotorcycleVehicle: Vehicle,DisplayDetails{
     }
     
     override func vehicleInfo() -> String {
-        return "\(super.vehicleInfo()),number of doors \(numberOfDoors)"
+        return "\(super.vehicleInfo()),number of doors = \(numberOfDoors)"
     }
     
     func displayDetails() -> String {
-        <#code#>
+        return vehicleInfo()
     }
     
     
