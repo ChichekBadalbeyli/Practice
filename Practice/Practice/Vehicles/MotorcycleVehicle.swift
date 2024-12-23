@@ -9,18 +9,18 @@ import Foundation
 
 class MotorcycleVehicle: Vehicle,DisplayDetails{
     
-    var numberOfDoors = Int()
+    private var numberOfDoors = Int()
     
     init(numberOfDoors: Int = Int()) {
         self.numberOfDoors = numberOfDoors
         super.init(make: "Harley-Davidson", model: "X440", year: 1994)
     }
     
-    override func vehicleInfo() -> String {
+    internal override func vehicleInfo() -> String {
         return "\(super.vehicleInfo()),number of doors = \(numberOfDoors)"
     }
     
-    func displayDetails() -> String {
+    public func displayDetails() -> String {
         return vehicleInfo()
     }
     

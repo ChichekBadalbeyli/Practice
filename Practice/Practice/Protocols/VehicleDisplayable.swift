@@ -7,5 +7,5 @@
 
 import Foundation
 protocol DisplayDetails {
-  func displayDetails () -> String
+    func displayDetails () -> String
 }

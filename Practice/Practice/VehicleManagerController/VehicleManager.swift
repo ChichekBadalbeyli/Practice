@@ -9,12 +9,12 @@ import UIKit
 
 class VehicleManager: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var vehicleName = String()
-    var carDetail = CarVehicle()
-    var truckDetail = TrucksVehicle()
-    var motorDetail = MotorcycleVehicle()
-    var vehicles = ["car", "trucks", "motorcycle"]
-    var tableView = UITableView()
+    private var vehicleName = String()
+    private var carDetail = CarVehicle()
+    private var truckDetail = TrucksVehicle()
+    private var motorDetail = MotorcycleVehicle()
+    private var vehicles = ["car", "trucks", "motorcycle"]
+    private var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class VehicleManager: UIViewController, UITableViewDataSource, UITableViewDelega
         configureTableView()
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView = UITableView(frame: view.bounds)
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,7 +30,7 @@ class VehicleManager: UIViewController, UITableViewDataSource, UITableViewDelega
         view.addSubview(tableView)
     }
     
-    func newVehicle(name : String) {
+    private func newVehicle(name : String) {
         vehicleName = name
         vehicles.append(vehicleName)
         tableView.reloadData()

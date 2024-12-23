@@ -9,18 +9,18 @@ import Foundation
 
 class Vehicle {
     
-    var make = String()
-    var model = String()
-    var year = Int()
+    private var make = String()
+    private var model = String()
+    private var year = Int()
     
     init(make: String = String(), model: String = String(), year: Int = Int()) {
         self.make = make
         self.model = model
         self.year = year
     }
-    func vehicleInfo () -> String {
+    
+    public func vehicleInfo () -> String {
         return "\(make),\(model),\(year)"
     }
-    
 }
 
